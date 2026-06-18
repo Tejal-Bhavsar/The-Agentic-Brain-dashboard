@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mcrdse-bg: #faf6ee;
+  --color-mcrdse-card: #ffffff;
+  --color-mcrdse-plum: #200720;
+  --color-mcrdse-violet: #8b5cf6;
+  --color-mcrdse-violetHover: #7c3aed;
+  --color-mcrdse-taupe: #5c4e5c;
+  --color-mcrdse-sandDark: #f2eae0;
+  --color-mcrdse-green: #4f6f52;
+  --color-mcrdse-amber: #d97706;
+  --color-mcrdse-rose: #be123c;
+  
+  --font-serif: "DM Serif Display", Playfair Display, Georgia, serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #faf6ee;
+    color: #200720;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .border-mcrdse {
+    border-color: rgba(32, 7, 32, 0.15);
+  }
+  .card-editorial {
+    background-color: #ffffff;
+    border: 1px solid rgba(32, 7, 32, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px -2px rgba(32, 7, 32, 0.03);
+    transition: all 0.25s ease;
+  }
+  .card-editorial:hover {
+    border-color: rgba(32, 7, 32, 0.25);
+    box-shadow: 0 8px 30px -4px rgba(32, 7, 32, 0.06);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf6ee;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(32, 7, 32, 0.15);
+  border-radius: 9999px;
+  border: 2px solid #faf6ee;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(32, 7, 32, 0.35);
+}
+
+/* Animations */
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+.animate-float-subtle {
+  animation: float-subtle 4s ease-in-out infinite;
+}
